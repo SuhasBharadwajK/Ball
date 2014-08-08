@@ -52,5 +52,9 @@ public class MenuScreen extends Activity {
                 startActivity(new Intent(MenuScreen.this, Help.class));
             }
         });
+        /*@Override
+        public  void onBackPressed() {
+            moveTaskToBack(true);
+        }*/
     }
 }
