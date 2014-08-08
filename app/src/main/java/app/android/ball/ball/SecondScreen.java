@@ -41,12 +41,12 @@ import android.app.Activity;
             if(flag == 1 && flag2%2 == 0) {
                 if (x < can.getWidth() && dirx == 1) {
                     x += 10;
-                    if (x == can.getWidth())
+                    if (x > can.getWidth() - 5)
                         dirx = 2;
                 }
                 if (x > 0 && dirx == 2) {
                     x -= 10;
-                    if (x == 0)
+                    if (x < 3)
                         dirx = 1;
                 }
                 if (y < can.getHeight() && diry == 1) {
