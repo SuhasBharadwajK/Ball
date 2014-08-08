@@ -20,6 +20,7 @@ public class Credits extends Activity {
                     @Override
                     public void onClick(View view) {
                         startActivity((new Intent(Credits.this,MenuScreen.class)).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        /*Source: http://tips.androidhive.info/2013/10/how-to-clear-all-activity-stack-in-android/*/
             }
         });
     }
