@@ -22,6 +22,7 @@ import android.app.Activity;
  */
     public class SecondScreen extends View {
         Paint myPaint = new Paint();
+
         int dirx = 1, diry = 1;
         int x, y,st, flag, flag2, factX = 10, factY = 10, a, b;
         /*DisplayMetrics metrics = getResources().getDisplayMetrics();
@@ -35,37 +36,51 @@ import android.app.Activity;
                 x = a = can.getWidth() / 2;
                 y = b = can.getHeight() / 2;
                 st = 1;
+                myPaint.setColor(Color.parseColor("#0099cc"));
             }
             if(a == x && b == y) {
                 factX = 10;
                 factY = 10;
             }
-            myPaint.setColor(Color.parseColor("#0099cc"));
+
             can.drawCircle(x,y,40,myPaint);
             if(flag == 1 /*&& flag2%2 == 0*/) {
                 if (x < can.getWidth() && dirx == 1) {
                     x += factX;
+
                     if (x > can.getWidth() - 1) {
                         dirx = 2;
+                        myPaint.setColor(Color.parseColor("#000000"));
+                        //Toast.makeText(getContext(),"x:"+ x, Toast.LENGTH_LONG).show();
                     }
                 }
                 if (x > 0 && dirx == 2) {
                     x -= factX;
-                    if (x < 3)
+
+                    if (x < 3) {
                         dirx = 1;
+                        myPaint.setColor(Color.parseColor("#00ffcc"));
+                        //Toast.makeText(getContext(), "x:" + x, Toast.LENGTH_LONG).show();
+                    }
                 }
                 if (y < can.getHeight() && diry == 1) {
                     y += factY;
+
                     if (y > can.getHeight() - 1) {
                         diry = 2;
-                        //Toast.makeText(getContext(),"y:"+ y, Toast.LENGTH_LONG).show();
+                        myPaint.setColor(Color.parseColor("#0000ff"));
+                        /*Toast.makeText(getContext(),"y:"+ y, Toast.LENGTH_LONG).show();*/
 
                     }
                 }
                 if (y > 0 && diry == 2) {
                     y -= factY;
-                    if (y < 3)
+
+                    if (y < 3) {
                         diry = 1;
+                        myPaint.setColor(Color.parseColor("#ff0000"));
+                        //Toast.makeText(getContext(),"y:"+ y, Toast.LENGTH_LONG).show();
+                    }
                 }
             }
             invalidate();
@@ -79,30 +94,31 @@ import android.app.Activity;
                 flag2++;
                 if(flag2 == 15)
                     flag2 = 1;
-                if(x < a && y > b) {
+                /*if(x < a && y > b) {
                     dirx = 1;
                     diry = 2;
-                    factX = a - x /*- *//*(a-x/50)*/;
-                    factY = y - b /*- *//*(y-b/50)*/;
+                    factX = a - x *//*- *//**//*(a-x/50)*//*;
+                    factY = y - b *//*- *//**//*(y-b/50)*//*;
+                    myPaint.setColor(Color.parseColor("#ff0000"));
                 }
                 if(x > a && y > b) {
                     dirx = 2;
                     diry = 2;
-                    factX = x - a /*- *//*(x-a/50)*/;
-                    factY = y - b /*- *//*(y-b/50)*/;
+                    factX = x - a *//*- *//**//*(x-a/50)*//*;
+                    factY = y - b *//*- *//**//*(y-b/50)*//*;
                 }
                 if(x > a && y < b) {
                     dirx = 2;
                     diry = 1;
-                    factX = x - a /*- *//*(x-a/50)*/;
-                    factY = b - y/*- *//*(b-y/50)*/;
+                    factX = x - a *//*- *//**//*(x-a/50)*//*;
+                    factY = b - y*//*- *//**//*(b-y/50)*//*;
                 }
                 if(x < a && y < b) {
                     dirx = 1;
                     diry = 1;
-                    factX = a - x /*- *//*(a-x/50)*/;
-                    factY = b - y /*- *//*(b-y/50)*/;
-                }
+                    factX = a - x *//*- *//**//*(a-x/50)*//*;
+                    factY = b - y *//*- *//**//*(b-y/50)*//*;
+                }*/
             }
             return true;
         }
