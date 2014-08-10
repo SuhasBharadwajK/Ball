@@ -97,27 +97,27 @@ import android.app.Activity;
                 /*if(x < a && y > b) {
                     dirx = 1;
                     diry = 2;
-                    factX = a - x *//*- *//**//*(a-x/50)*//*;
-                    factY = y - b *//*- *//**//*(y-b/50)*//*;
+                    factX = a - x - (a-x/50);
+                    factY = y - b - (y-b/50);
                     myPaint.setColor(Color.parseColor("#ff0000"));
                 }
                 if(x > a && y > b) {
                     dirx = 2;
                     diry = 2;
-                    factX = x - a *//*- *//**//*(x-a/50)*//*;
-                    factY = y - b *//*- *//**//*(y-b/50)*//*;
+                    factX = x - a - (x-a/50);
+                    factY = y - b - (y-b/50);
                 }
                 if(x > a && y < b) {
                     dirx = 2;
                     diry = 1;
-                    factX = x - a *//*- *//**//*(x-a/50)*//*;
-                    factY = b - y*//*- *//**//*(b-y/50)*//*;
+                    factX = x - a - (x-a/50);
+                    factY = b - y- (b-y/50);
                 }
                 if(x < a && y < b) {
                     dirx = 1;
                     diry = 1;
-                    factX = a - x *//*- *//**//*(a-x/50)*//*;
-                    factY = b - y *//*- *//**//*(b-y/50)*//*;
+                    factX = a - x - (a-x/50);
+                    factY = b - y - (b-y/50);
                 }*/
             }
             return true;
