@@ -24,7 +24,7 @@ import android.app.Activity;
         Paint myPaint = new Paint();
 
         int dirx = 1, diry = 1;
-        int x, y,st, flag, flag2, factX = 10, factY = 10, a, b;
+        int x, y,st, flag, flag2=1, factX = 10, factY = 10, a, b;
         /*DisplayMetrics metrics = getResources().getDisplayMetrics();
         int x = metrics.heightPixels;
         int y = metrics.widthPixels;*/
@@ -44,7 +44,7 @@ import android.app.Activity;
             }
 
             can.drawCircle(x,y,40,myPaint);
-            if(flag == 1 /*&& flag2%2 == 0*/) {
+            if(flag == 1 && flag2%2 == 0) {
                 if (x < can.getWidth() && dirx == 1) {
                     x += factX;
 
@@ -99,7 +99,6 @@ import android.app.Activity;
                     diry = 2;
                     factX = a - x - (a-x/50);
                     factY = y - b - (y-b/50);
-                    myPaint.setColor(Color.parseColor("#ff0000"));
                 }
                 if(x > a && y > b) {
                     dirx = 2;
